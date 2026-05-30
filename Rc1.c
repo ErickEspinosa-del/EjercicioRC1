@@ -21,9 +21,25 @@
                 }
                 
             }
-            
+            reporte [0][col]= suma/ (float)numEstudiantes;
+            reporte [1][col]=max;
+            reporte [2][col]=min;
         }
-        
+       int main (){
+       int numEstudiantes;
+       printf("Ingrese la cantidad de estudiantes:\n");
+       scanf("%d",&numEstudiantes);
+       float notas [numEstudiantes][3];
+       float reporte [3][3];
+       for (int f = 0; f < numEstudiantes; f++)
+       {
+        printf("\n--Estudiante %d --\n", f+1);
+       }
+       
+
+
+
+       } 
         
 
     }
