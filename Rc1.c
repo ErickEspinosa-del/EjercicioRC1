@@ -68,7 +68,17 @@
         printf("%10.2f", reporte[0][c]);
 
        }
-       
+       printf("\nMAXIMOS:  ");
+       for (int c = 0; c < 3; c++)
+       {
+        printf("%10.2f", reporte[1][c]);
+       }
+       printf("\nMINIMOS:  ");
+       for (int c = 0; c < 3; c++)
+       {
+        printf("%10.2f", reporte[2][c]);
+       }
+       printf("\n=========     FIN     =============");
       } 
         
 
