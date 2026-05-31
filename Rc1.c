@@ -25,6 +25,7 @@
             reporte [1][col]=max;
             reporte [2][col]=min;
         }
+    }
        int main (){
        int numEstudiantes;
        printf("Ingrese la cantidad de estudiantes:\n");
@@ -34,13 +35,17 @@
        for (int f = 0; f < numEstudiantes; f++)
        {
         printf("\n--Estudiante %d --\n", f+1);
+        for (int c = 0; c < 3; c++)
+       {
+        printf("ingrese la nota de la materia:%d\n",c+1);
+        scanf("%f",&notas[f][c]);
        }
+       }
+       procesarmatriz(numEstudiantes,notas,reporte);
        
-
-
-
-       } 
+       
+      } 
         
 
-    }
+    
     
