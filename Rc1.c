@@ -42,7 +42,16 @@
        }
        }
        procesarmatriz(numEstudiantes,notas,reporte);
-       
+       printf("\n--CLASIFICAION POR ESTUDIANTE--\n");
+       for (int f = 0; f < numEstudiantes; f++)
+       {
+        float sumaEstudiante=0;
+        for (int c = 0; c < 3; c++)
+        {
+            sumaEstudiante=sumaEstudiante+notas[f][c];
+        } 
+        float promedioEstudiante=sumaEstudiante/3.0;
+       }
        
       } 
         
