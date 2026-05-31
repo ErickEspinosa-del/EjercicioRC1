@@ -30,6 +30,16 @@
        int numEstudiantes;
        printf("Ingrese la cantidad de estudiantes:\n");
        scanf("%d",&numEstudiantes);
+       while (numEstudiantes<=0)
+       {
+        if (numEstudiantes<=0)
+        {
+          printf("Error no se admiten numeros negativos ni 0\n");
+        }
+        printf("Vuelva a ingresar la cantidad de estudiantes:\n");
+        scanf("%d", &numEstudiantes);
+       }
+       
        float notas [numEstudiantes][3];
        float reporte [3][3];
        for (int f = 0; f < numEstudiantes; f++)
@@ -39,6 +49,16 @@
        {
         printf("ingrese la nota de la materia:%d\n",c+1);
         scanf("%f",&notas[f][c]);
+        while (notas[f][c]<0.0 || notas [f][c] > 10.0)
+        {
+            if (notas[f][c]<0.0 || notas [f][c] > 10.0)
+            {
+                printf("[ERROR] La nota no puede ser negativa ni puede ser mayor a 10\n");
+            }
+           printf("Vuelva a ingresar las notas de la materia %d\n", c+1);
+           scanf("%f", &notas[f][c]); 
+        }
+        
        }
        }
        procesarmatriz(numEstudiantes,notas,reporte);
@@ -61,8 +81,8 @@
         }
        }
        printf("\n--REPORTE FINAL ASIGNATURAS (MATRIZ)--");
-       printf("\n        Asig1    Asig2    Asig3\n");
-       printf("PROMEDIOS:  ");
+       printf("\n               Asig1    Asig2    Asig3\n");
+       printf("PROMEDIOS:");
        for (int c = 0; c < 3; c++)
        {
         printf("%10.2f", reporte[0][c]);
@@ -79,6 +99,7 @@
         printf("%10.2f", reporte[2][c]);
        }
        printf("\n=========     FIN     =============");
+       return 0;
       } 
         
 
