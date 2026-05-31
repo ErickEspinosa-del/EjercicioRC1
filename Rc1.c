@@ -51,6 +51,22 @@
             sumaEstudiante=sumaEstudiante+notas[f][c];
         } 
         float promedioEstudiante=sumaEstudiante/3.0;
+        printf("\nEstudiante %d - Promedio:%.2f-",f+1, promedioEstudiante);
+        if (promedioEstudiante >= 7.0)
+        {
+            printf("APROBADO");
+        }
+        else{
+            printf("REPROBADO");
+        }
+       }
+       printf("\n--REPORTE FINAL ASIGNATURAS (MATRIZ)--");
+       printf("\n        Asig1    Asig2    Asig3\n");
+       printf("PROMEDIOS:  ");
+       for (int c = 0; c < 3; c++)
+       {
+        printf("%10.2f", reporte[0][c]);
+
        }
        
       } 
